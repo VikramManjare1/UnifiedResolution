@@ -1,0 +1,214 @@
+<PROGRAM>
+	<PREDICATE pos="1:9" text="Mother">
+		<CONSTANT pos="1:11" text="liz" />
+		<CONSTANT pos="1:11" text="charley" />
+	</PREDICATE>
+	<PREDICATE pos="1:9" text="Father">
+		<CONSTANT pos="1:11" text="charley" />
+		<CONSTANT pos="1:11" text="billy" />
+	</PREDICATE>
+	<OR pos="1:14" text="or">
+		<NOT pos="1:9" text="not">
+			<PREDICATE pos="1:9" text="Mother">
+				<VARIABLE pos="1:11" text="X_0" />
+				<VARIABLE pos="1:11" text="Y_1" />
+			</PREDICATE>
+		</NOT>
+		<PREDICATE pos="1:33" text="Parent">
+			<VARIABLE pos="1:11" text="X_0" />
+			<VARIABLE pos="1:11" text="Y_1" />
+		</PREDICATE>
+	</OR>
+	<OR pos="1:14" text="or">
+		<NOT pos="1:9" text="not">
+			<PREDICATE pos="1:9" text="Father">
+				<VARIABLE pos="1:11" text="X_2" />
+				<VARIABLE pos="1:11" text="Y_3" />
+			</PREDICATE>
+		</NOT>
+		<PREDICATE pos="1:33" text="Parent">
+			<VARIABLE pos="1:11" text="X_2" />
+			<VARIABLE pos="1:11" text="Y_3" />
+		</PREDICATE>
+	</OR>
+	<OR pos="1:14" text="or">
+		<NOT pos="1:9" text="not">
+			<PREDICATE pos="1:9" text="Parent">
+				<VARIABLE pos="1:11" text="X_4" />
+				<VARIABLE pos="1:11" text="Y_5" />
+			</PREDICATE>
+		</NOT>
+		<PREDICATE pos="1:33" text="Ancestor">
+			<VARIABLE pos="1:11" text="X_4" />
+			<VARIABLE pos="1:11" text="Y_5" />
+		</PREDICATE>
+	</OR>
+	<OR pos="1:14" text="or">
+		<OR pos="1:14" text="or">
+			<NOT pos="1:9" text="not">
+				<PREDICATE pos="1:9" text="Parent">
+					<VARIABLE pos="1:11" text="X_6" />
+					<VARIABLE pos="1:11" text="Y_7" />
+				</PREDICATE>
+			</NOT>
+			<NOT pos="1:9" text="not">
+				<PREDICATE pos="1:33" text="Ancestor">
+					<VARIABLE pos="1:11" text="Y_7" />
+					<VARIABLE pos="1:11" text="Z_8" />
+				</PREDICATE>
+			</NOT>
+		</OR>
+		<PREDICATE pos="1:33" text="Ancestor">
+			<VARIABLE pos="1:11" text="X_6" />
+			<VARIABLE pos="1:11" text="Z_8" />
+		</PREDICATE>
+	</OR>
+	<EQ text="=">
+		<VARIABLE text="X_9" />
+		<VARIABLE text="X_9" />
+	</EQ>
+	<OR text="or">
+		<NOT>
+			<EQ text="=">
+				<VARIABLE text="X_10" />
+				<VARIABLE text="Y_11" />
+			</EQ>
+		</NOT>
+		<EQ text="=">
+			<VARIABLE text="Y_11" />
+			<VARIABLE text="X_10" />
+		</EQ>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="X_12" />
+					<VARIABLE text="Y_13" />
+				</EQ>
+			</NOT>
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="Y_13" />
+					<VARIABLE text="Z_14" />
+				</EQ>
+			</NOT>
+		</OR>
+		<EQ text="=">
+			<VARIABLE text="X_12" />
+			<VARIABLE text="Z_14" />
+		</EQ>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="Parent">
+					<VARIABLE text="X1_15" />
+					<VARIABLE text="X2_17" />
+				</PREDICATE>
+			</NOT>
+			<OR text="or">
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X1_15" />
+						<VARIABLE text="Y1_16" />
+					</EQ>
+				</NOT>
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X2_17" />
+						<VARIABLE text="Y2_18" />
+					</EQ>
+				</NOT>
+			</OR>
+		</OR>
+		<PREDICATE text="Parent">
+			<VARIABLE text="Y1_16" />
+			<VARIABLE text="Y2_18" />
+		</PREDICATE>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="Ancestor">
+					<VARIABLE text="X1_19" />
+					<VARIABLE text="X2_21" />
+				</PREDICATE>
+			</NOT>
+			<OR text="or">
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X1_19" />
+						<VARIABLE text="Y1_20" />
+					</EQ>
+				</NOT>
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X2_21" />
+						<VARIABLE text="Y2_22" />
+					</EQ>
+				</NOT>
+			</OR>
+		</OR>
+		<PREDICATE text="Ancestor">
+			<VARIABLE text="Y1_20" />
+			<VARIABLE text="Y2_22" />
+		</PREDICATE>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="Father">
+					<VARIABLE text="X1_23" />
+					<VARIABLE text="X2_25" />
+				</PREDICATE>
+			</NOT>
+			<OR text="or">
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X1_23" />
+						<VARIABLE text="Y1_24" />
+					</EQ>
+				</NOT>
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X2_25" />
+						<VARIABLE text="Y2_26" />
+					</EQ>
+				</NOT>
+			</OR>
+		</OR>
+		<PREDICATE text="Father">
+			<VARIABLE text="Y1_24" />
+			<VARIABLE text="Y2_26" />
+		</PREDICATE>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="Mother">
+					<VARIABLE text="X1_27" />
+					<VARIABLE text="X2_29" />
+				</PREDICATE>
+			</NOT>
+			<OR text="or">
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X1_27" />
+						<VARIABLE text="Y1_28" />
+					</EQ>
+				</NOT>
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X2_29" />
+						<VARIABLE text="Y2_30" />
+					</EQ>
+				</NOT>
+			</OR>
+		</OR>
+		<PREDICATE text="Mother">
+			<VARIABLE text="Y1_28" />
+			<VARIABLE text="Y2_30" />
+		</PREDICATE>
+	</OR>
+</PROGRAM>

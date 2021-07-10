@@ -1,0 +1,12 @@
+<PROGRAM>
+    <OR pos="1:14" text="or">
+      <PREDICATE pos="1:9" text="man">
+            <VARIABLE pos="1:11" text="X" />
+      </PREDICATE>
+
+           <PREDICATE pos="1:33" text="mortal">
+                    <VARIABLE pos="1:35" text="X" />
+                </PREDICATE>
+    </OR>
+
+</PROGRAM>	

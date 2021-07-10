@@ -1,0 +1,15 @@
+<PROGRAM>
+    <AND text ="and">
+      <NOT  text="not">
+      <PREDICATE pos="1:9" text="P">
+            <VARIABLE pos="1:11" text="x" />
+			
+      </PREDICATE>
+	  </NOT>
+	    <NOT  text="not">
+	        <PREDICATE pos="1:9" text="Q">
+            <VARIABLE pos="1:11" text="x" />
+      </PREDICATE>
+	  </NOT>
+	  </AND>
+</PROGRAM>	  

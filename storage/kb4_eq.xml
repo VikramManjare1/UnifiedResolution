@@ -1,0 +1,106 @@
+<PROGRAM>
+	<OR text="or">
+		<NOT text="not">
+			<PREDICATE pos="1:9" text="P">
+				<VARIABLE pos="1:11" text="x_0" />
+			</PREDICATE>
+		</NOT>
+		<PREDICATE pos="1:9" text="Q">
+			<VARIABLE pos="1:11" text="x_0" />
+		</PREDICATE>
+	</OR>
+	<OR text="or">
+		<NOT text="not">
+			<PREDICATE pos="1:9" text="P">
+				<VARIABLE pos="1:11" text="x_1" />
+			</PREDICATE>
+		</NOT>
+		<NOT text="not">
+			<PREDICATE pos="1:9" text="Q">
+				<VARIABLE pos="1:11" text="x_1" />
+			</PREDICATE>
+		</NOT>
+	</OR>
+	<OR text="or">
+		<PREDICATE pos="1:9" text="P">
+			<VARIABLE pos="1:11" text="x_2" />
+		</PREDICATE>
+		<NOT text="not">
+			<PREDICATE pos="1:9" text="Q">
+				<VARIABLE pos="1:11" text="x_2" />
+			</PREDICATE>
+		</NOT>
+	</OR>
+	<EQ text="=">
+		<VARIABLE text="X_3" />
+		<VARIABLE text="X_3" />
+	</EQ>
+	<OR text="or">
+		<NOT>
+			<EQ text="=">
+				<VARIABLE text="X_4" />
+				<VARIABLE text="Y_5" />
+			</EQ>
+		</NOT>
+		<EQ text="=">
+			<VARIABLE text="Y_5" />
+			<VARIABLE text="X_4" />
+		</EQ>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="X_6" />
+					<VARIABLE text="Y_7" />
+				</EQ>
+			</NOT>
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="Y_7" />
+					<VARIABLE text="Z_8" />
+				</EQ>
+			</NOT>
+		</OR>
+		<EQ text="=">
+			<VARIABLE text="X_6" />
+			<VARIABLE text="Z_8" />
+		</EQ>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="P">
+					<VARIABLE text="X1_9" />
+				</PREDICATE>
+			</NOT>
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="X1_9" />
+					<VARIABLE text="Y1_10" />
+				</EQ>
+			</NOT>
+		</OR>
+		<PREDICATE text="P">
+			<VARIABLE text="Y1_10" />
+		</PREDICATE>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="Q">
+					<VARIABLE text="X1_11" />
+				</PREDICATE>
+			</NOT>
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="X1_11" />
+					<VARIABLE text="Y1_12" />
+				</EQ>
+			</NOT>
+		</OR>
+		<PREDICATE text="Q">
+			<VARIABLE text="Y1_12" />
+		</PREDICATE>
+	</OR>
+</PROGRAM>

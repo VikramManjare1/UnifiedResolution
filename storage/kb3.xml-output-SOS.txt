@@ -1,0 +1,36 @@
+Knowledge Base = { 
+	[Mother(liz,charley)]
+	[Father(charley,billy)]
+	[~Mother(X,Y), Parent(X,Y)]
+	[~Father(X,Y), Parent(X,Y)]
+	[~Parent(X,Y), Ancestor(X,Y)]
+	[~Parent(X,Y), ~Ancestor(Y,Z), Ancestor(X,Z)]
+}
+
+~Goal ----> [~Ancestor(liz,billy)]
+
+query ----> [~Ancestor(liz,billy)]
+unification with ----> [~Parent(X,Y), ~Ancestor(Y,Z), Ancestor(X,Z)]
+after resolve ----> [~Ancestor(Y,billy), ~Parent(liz,Y)]
+
+query ----> [~Ancestor(Y,billy), ~Parent(liz,Y)]
+unification with ----> [~Mother(X,Y), Parent(X,Y)]
+after resolve ----> [~Mother(liz,Y), ~Ancestor(Y,billy)]
+
+query ----> [~Mother(liz,Y), ~Ancestor(Y,billy)]
+unification with ----> [Mother(liz,charley)]
+after resolve ----> [~Ancestor(charley,billy)]
+
+query ----> [~Ancestor(charley,billy)]
+unification with ----> [~Parent(X,Y), Ancestor(X,Y)]
+after resolve ----> [~Parent(charley,billy)]
+
+query ----> [~Parent(charley,billy)]
+unification with ----> [~Father(X,Y), Parent(X,Y)]
+after resolve ----> [~Father(charley,billy)]
+
+query ----> [~Father(charley,billy)]
+unification with ----> [Father(charley,billy)]
+after resolve ----> []
+
+True

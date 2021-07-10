@@ -1,0 +1,86 @@
+<PROGRAM>
+	<OR pos="3:32" text="or">
+		<OR text="or">
+			<NOT>
+				<EQ pos="3:36" text="=">
+					<VARIABLE pos="3:35" text="N_0_0" />
+					<INTEGER pos="3:37" text="0" />
+				</EQ>
+			</NOT>
+			<NOT>
+				<EQ pos="3:42" text="=">
+					<VARIABLE pos="3:41" text="V_1_1" />
+					<INTEGER pos="3:43" text="1" />
+				</EQ>
+			</NOT>
+		</OR>
+		<PREDICATE pos="3:17" text="fib">
+			<VARIABLE pos="3:21" text="N_0_0" />
+			<VARIABLE pos="3:23" text="V_1_1" />
+		</PREDICATE>
+	</OR>
+	<EQ text="=">
+		<VARIABLE text="X_2" />
+		<VARIABLE text="X_2" />
+	</EQ>
+	<OR text="or">
+		<NOT>
+			<EQ text="=">
+				<VARIABLE text="X_3" />
+				<VARIABLE text="Y_4" />
+			</EQ>
+		</NOT>
+		<EQ text="=">
+			<VARIABLE text="Y_4" />
+			<VARIABLE text="X_3" />
+		</EQ>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="X_5" />
+					<VARIABLE text="Y_6" />
+				</EQ>
+			</NOT>
+			<NOT>
+				<EQ text="=">
+					<VARIABLE text="Y_6" />
+					<VARIABLE text="Z_7" />
+				</EQ>
+			</NOT>
+		</OR>
+		<EQ text="=">
+			<VARIABLE text="X_5" />
+			<VARIABLE text="Z_7" />
+		</EQ>
+	</OR>
+	<OR text="or">
+		<OR text="or">
+			<NOT>
+				<PREDICATE text="fib">
+					<VARIABLE text="X1_8" />
+					<VARIABLE text="X2_10" />
+				</PREDICATE>
+			</NOT>
+			<OR text="or">
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X1_8" />
+						<VARIABLE text="Y1_9" />
+					</EQ>
+				</NOT>
+				<NOT>
+					<EQ text="=">
+						<VARIABLE text="X2_10" />
+						<VARIABLE text="Y2_11" />
+					</EQ>
+				</NOT>
+			</OR>
+		</OR>
+		<PREDICATE text="fib">
+			<VARIABLE text="Y1_9" />
+			<VARIABLE text="Y2_11" />
+		</PREDICATE>
+	</OR>
+</PROGRAM>

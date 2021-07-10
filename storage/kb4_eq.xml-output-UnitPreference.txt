@@ -1,0 +1,30 @@
+Knowledge Base = { 
+	[~P(x_0), Q(x_0)]
+	[~P(x_1), ~Q(x_1)]
+	[P(x_2), ~Q(x_2)]
+	[EQ(X_3,X_3)]
+	[~EQ(X_4,Y_5), EQ(Y_5,X_4)]
+	[~EQ(X_6,Y_7), ~EQ(Y_7,Z_8), EQ(X_6,Z_8)]
+	[~P(X1_9), ~EQ(X1_9,Y1_10), P(Y1_10)]
+	[~Q(X1_11), ~EQ(X1_11,Y1_12), Q(Y1_12)]
+}
+
+~Goal ----> [P(x), Q(x)]
+
+query ----> [P(x), Q(x)]
+unification with ----> [~P(x_0), Q(x_0)]
+after resolve ----> [Q(x)]
+
+query ----> [Q(x)]
+unification with ----> [~P(x_1), ~Q(x_1)]
+after resolve ----> [~P(x)]
+
+query ----> [~P(x)]
+unification with ----> [P(x_2), ~Q(x_2)]
+after resolve ----> [~Q(x)]
+
+query ----> [~Q(x)]
+unification with ----> [Q(x)]
+after resolve ----> []
+
+True

@@ -1,0 +1,8 @@
+<PROGRAM>
+
+      <PREDICATE pos="1:9" text="Ancestor">
+            <CONSTANT pos="1:11" text="liz" />
+			<CONSTANT pos="1:11" text="billy" />
+      </PREDICATE>
+	 
+</PROGRAM>	  

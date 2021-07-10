@@ -1,0 +1,29 @@
+Knowledge Base --->  ['mother(liz,charley)', 'father(charley,billy)', '~mother(X,Y)|parent(X,Y)', '~father(X,Y)|parent(X,Y)', '~parent(X,Y)|ancestor(X,Y)', '~parent(X,Y)|~ancestor(Y,Z)|ancestor(X,Z)']
+
+~Goal ----> ~ancestor(liz,billy) 
+
+query ----->    ~ancestor(liz,billy)
+unification with ---> ~parent(X,Y)|~ancestor(Y,Z)|ancestor(X,Z)
+after resolve----->  ~parent(liz,Y)|~ancestor(Y,billy) 
+
+query----->    ~parent(liz,Y)|~ancestor(Y,billy)
+unification with ---> ~mother(X,Y)|parent(X,Y)
+after resolve----->  ~mother(liz,Y)|~ancestor(Y,billy) 
+
+query----->    ~mother(liz,Y)|~ancestor(Y,billy)
+unification with ---> mother(liz,charley)
+after resolve----->  ~ancestor(charley,billy) 
+
+query----->    ~ancestor(charley,billy)
+unification with ---> ~parent(X,Y)|ancestor(X,Y)
+after resolve----->  ~parent(charley,billy) 
+
+query----->    ~parent(charley,billy)
+unification with ---> ~father(X,Y)|parent(X,Y)
+after resolve----->  ~father(charley,billy) 
+
+query----->    ~father(charley,billy)
+unification with ---> father(charley,billy)
+after resolve-----> EMPTY CLAUSE  
+
+True 

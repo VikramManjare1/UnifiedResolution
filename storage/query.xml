@@ -1,0 +1,6 @@
+<PROGRAM>
+      <PREDICATE pos="1:9" text="fib">
+            <INTEGER pos="3:37" text="0" />
+			<INTEGER pos="3:37" text="1" />
+      </PREDICATE>
+</PROGRAM>	

@@ -1,0 +1,25 @@
+Knowledge Base = { 
+	[~P(x), Q(x)]
+	[~P(x), ~Q(x)]
+	[P(x), ~Q(x)]
+}
+
+~Goal ----> [P(x), Q(x)]
+
+query ----> [P(x), Q(x)]
+unification with ----> [~P(x), Q(x)]
+after resolve ----> [Q(x)]
+
+query ----> [Q(x)]
+unification with ----> [~P(x), ~Q(x)]
+after resolve ----> [~P(x)]
+
+query ----> [~P(x)]
+unification with ----> [P(x), ~Q(x)]
+after resolve ----> [~Q(x)]
+
+query ----> [~Q(x)]
+unification with ----> [Q(x)]
+after resolve ----> []
+
+True

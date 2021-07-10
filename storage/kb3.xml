@@ -1,0 +1,77 @@
+<PROGRAM>
+
+      <PREDICATE pos="1:9" text="Mother">
+            <CONSTANT pos="1:11" text="liz" />
+			<CONSTANT pos="1:11" text="charley" />
+      </PREDICATE>
+	  
+	        <PREDICATE pos="1:9" text="Father">
+            <CONSTANT pos="1:11" text="charley" />
+			<CONSTANT pos="1:11" text="billy" />
+      </PREDICATE>
+
+    <OR pos="1:14" text="or">
+	 <NOT pos="1:9" text="not">
+      <PREDICATE pos="1:9" text="Mother">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+      </PREDICATE>
+        </NOT>
+           <PREDICATE pos="1:33" text="Parent">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+           </PREDICATE>
+    </OR>
+	
+	
+	<OR pos="1:14" text="or">
+	 <NOT pos="1:9" text="not">
+      <PREDICATE pos="1:9" text="Father">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+      </PREDICATE>
+        </NOT>
+           <PREDICATE pos="1:33" text="Parent">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+           </PREDICATE>
+    </OR>
+	
+	
+		<OR pos="1:14" text="or">
+	 <NOT pos="1:9" text="not">
+      <PREDICATE pos="1:9" text="Parent">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+      </PREDICATE>
+        </NOT>
+           <PREDICATE pos="1:33" text="Ancestor">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+           </PREDICATE>
+    </OR>
+	
+	
+    <OR pos="1:14" text="or">
+	 <OR pos="1:14" text="or">
+	 <NOT pos="1:9" text="not">
+      <PREDICATE pos="1:9" text="Parent">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Y" />
+      </PREDICATE>
+        </NOT>
+		<NOT pos="1:9" text="not">
+           <PREDICATE pos="1:33" text="Ancestor">
+            <VARIABLE pos="1:11" text="Y" />
+			<VARIABLE pos="1:11" text="Z" />
+           </PREDICATE>
+		 </NOT>  
+	  </OR>
+           <PREDICATE pos="1:33" text="Ancestor">
+            <VARIABLE pos="1:11" text="X" />
+			<VARIABLE pos="1:11" text="Z" />
+           </PREDICATE>
+   	  
+    </OR>
+	
+	</PROGRAM>	

@@ -1,0 +1,7 @@
+query ----->  ~mortal(socrates)
+~mortal(socrates) <---------unification---- ---> man(X)|mortal(X)
+after resolve ------> man(socrates)
+
+query ----->  man(socrates)
+
+False man(socrates)
